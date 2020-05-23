@@ -1,5 +1,8 @@
 from selenium.webdriver.common.by import By
-from test.common.page import Page
+# from test.common.page import Page
+from Test_framework.test.common.page import Page
+
+
 
 # 封装的百度首页
 

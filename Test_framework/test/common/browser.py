@@ -1,7 +1,9 @@
 import time
 import os
 from selenium import webdriver
-from utils.config import DRIVER_PATH, REPORT_PATH
+from Test_framework.utils.config import DRIVER_PATH, REPORT_PATH
+
+
 
 # 根据传入的参数选择浏览器的driver去打开对应的浏览器
 

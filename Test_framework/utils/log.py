@@ -49,3 +49,4 @@ class Logger(object):
         return self.logger
 
 logger = Logger().get_logger()
+# logger =Logger()     #修改后的，无用

@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
-from test.page.baidu_main_page import BaiDuMainPage
+# from .test.page.baidu_main_page import BaiDuMainPage
+from .baidu_main_page import BaiDuMainPage
 
 # 封装百度结果页
 

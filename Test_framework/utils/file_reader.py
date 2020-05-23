@@ -79,11 +79,11 @@ class ExcelReader:
 
 if __name__ == '__main__':
 
-    y = 'E:\Test_framework\config\config.yml'
+    y = 'D:/Users/zhq37/Documents/GitHub/Test/Test_framework/config/config.yml'
     reader = YamlReader(y)
     print(reader.data)
 
-    e = 'E:/Test_framework/data/baidu.xlsx'
+    e = 'D:/Users/zhq37/Documents/GitHub/Test/Test_framework/data/baidu.xlsx'
     reader = ExcelReader(e, title_line=True)
     print(reader.data)
 

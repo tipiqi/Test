@@ -1,0 +1,4 @@
+test - INFO - 2020-05-22 15:18:46,354 - I am <info> message.
+test - DEBUG - 2020-05-22 15:18:46,355 - I am <debug> message.
+test - INFO - 2020-05-22 15:32:19,737 - I am <info> message.
+test - DEBUG - 2020-05-22 15:32:19,738 - I am <debug> message.

@@ -8,10 +8,12 @@ from .utils.log import logger # 引入日志模块
 from .utils.file_reader import ExcelReader  # 引入xls读取模块
 from .utils.HTMLTestRunner import HTMLTestRunner
 from .utils.mail import Email
-from .test.page.baidu_result_page import BaiDuMainPage, BaiDuResultPage
+from .test.page.baidu_result_page import BaiDuResultPage
+from .test.page.baidu_main_page import BaiDuMainPage
 
 class TestBaiDu(unittest.TestCase):
     URL = Config().get('URL')
+    # URL = 'HTTP://www.baidu.com'    调试用
     excel = DATA_PATH + '/baidu.xlsx'
 
     def sub_setUp(self):

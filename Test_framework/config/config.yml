@@ -1,5 +1,10 @@
-local_url: http://xxxxxxxx/app    # 测试网址
-api_url: http://xxxxxx/
+#local_url: http://xxxxxxxx/app    # 测试网址
+URL: http://www.baidu.com         # 调试用
+#local_url: http://10.1.60.102
+#api_url: http://www.baidu.com
+
+
+
 images:
  - images/0.jpg
  - images/1.jpg
