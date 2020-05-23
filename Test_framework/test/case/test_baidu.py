@@ -8,20 +8,21 @@ from Test_framework.utils.log import logger # 引入日志模块
 from Test_framework.utils.file_reader import ExcelReader  # 引入xls读取模块
 from Test_framework.utils.HTMLTestRunner import HTMLTestRunner
 from Test_framework.utils.mail import Email
-from test.baidu_result_page import BaiDuMainPage, BaiDuResultPage
-from test.page.baidu_result_page import BaiDuMainPage, BaiDuResultPage
+# from test.baidu_result_page import BaiDuMainPage, BaiDuResultPage    查找不到
+from Test_framework.test.page.baidu_main_page import BaiDuMainPage
+from Test_framework.test.page.baidu_result_page import BaiDuResultPage
+
 
 class TestBaiDu(unittest.TestCase):
     URL = Config().get('URL')
-    excel = DATA_PATH + '/cdllpdata.xlsx'
+    excel = DATA_PATH + '/baidu.xlsx'
 
     def sub_setUp(self):
         # 初始页面是main page，传入浏览器类型打开浏览器
         self.page = BaiDuMainPage(browser_type='chrome').get(self.URL, maximize_window=False)
 
     def sub_tearDown(self):
-        self.driver.quit()  # 清理退出
-
+        self.page.quit()  # 清理退出
     def test_search(self):
         datas = ExcelReader(self.excel).data
         for d in datas:
@@ -41,9 +42,8 @@ if __name__ == '__main__':
     report = REPORT_PATH + '\\report.html'
     print(report)
     with open(report, 'wb') as f:
-        runner = HTMLTestRunner(f, verbosity=2, title='栾鹏全栈', description='修改html报告')
+        runner = HTMLTestRunner(f, verbosity=2, title='天使', description='修改html报告')
         runner.run(TestBaiDu('test_search'))
-
     # e = Email(title='百度搜索测试报告',
     #           message='这是今天的测试报告，请查收！',
     #           receiver='...',
